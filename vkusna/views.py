@@ -4,10 +4,10 @@ from django.http import HttpResponse
 from vkusna.models import User
 # Create your views here.
 def hi(request):
-    return HttpResponse('hewwo')
+    return render(request, 'index.html')
 
 def byebye(request):
-    return render(request, 'index.html')
+    return HttpResponse('hewwo')
 
 def UsersList(request):
     users= User.objects.all()
