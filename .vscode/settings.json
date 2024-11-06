@@ -7,5 +7,6 @@
             "database": "${workspaceFolder:Server}/db.sqlite3",
             "name": "pollka"
         }
-    ]
+    ],
+    "python.pythonPath": ".venv\\Scripts\\python.exe"
 }
