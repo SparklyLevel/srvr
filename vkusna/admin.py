@@ -9,3 +9,7 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Image)
 class UserAdmin(admin.ModelAdmin): 
     list_display = ['id', 'title', 'user', 'path']
+    
+@admin.register(Ff)
+class UserAdmin(admin.ModelAdmin): 
+    list_display = ['id', 'title', 'Number_of_views', 'dumbness']

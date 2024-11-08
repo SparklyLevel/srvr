@@ -17,4 +17,14 @@ class Image(models.Model):
     def __str__(self):
         return self.title
     
+class Ff(models.Model):
+    title = models.CharField(verbose_name='ФавФетиш')
+    Number_of_views = models.IntegerField(verbose_name='Просмотры')
+    Dumbness = models.BooleanField(verbase_name='Тупость', default=False)
+    
+    def __str__(self):
+        return self.title
+    
+
+
     
