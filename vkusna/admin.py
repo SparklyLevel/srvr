@@ -13,3 +13,7 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Ff)
 class UserAdmin(admin.ModelAdmin): 
     list_display = ['id', 'title', 'Number_of_views', 'dumbness']
+    
+@admin.register(Video)
+class UserAdmin(admin.ModelAdmin): 
+    list_display = ['id', 'length', 'description']

@@ -13,6 +13,7 @@ def byebye(request):
 def UsersList(request):
     users = User.objects.all().values('id', 'name', 'age', 'birth_date', 'IsFemboy')
     ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
+    video = Video.objects.all().values('id', 'length','description')
     users_list = list(users) 
     return JsonResponse(users_list, safe=False)
 
