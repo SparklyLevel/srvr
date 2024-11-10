@@ -2,12 +2,13 @@ from django.contrib import admin
 from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
-from vkusna.views import byebye, hi, UsersList
+from vkusna.views import byebye, hi, UsersList, FfList
 
 urlpatterns = [
     path('admin/', admin.site.urls),    
     path('', hi, name = 'main'),    
     path('bye/', byebye, name = 'nemain'),    
-    path('users/', UsersList, name = 'userList'),    
+    path('users/', UsersList, name = 'userList'),  
+    path('ff/', FfList, name = 'ffList'),
     
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
