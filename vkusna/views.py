@@ -16,7 +16,7 @@ def UsersList(request):
     return JsonResponse(users_list, safe=False)
 
 def FfList (request):
-     ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
+    ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
     ff_list = list(ff)
     return JsonResponse(ff_list,safe=False)
 
