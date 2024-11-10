@@ -18,7 +18,7 @@ class Image(models.Model):
         return self.title
     
 class Ff(models.Model):
-    title = models.CharField(verbose_name='ФавФетиш', maxlength=255)
+    title = models.CharField(verbose_name='ФавФетиш', max_length=255)
     Number_of_views = models.IntegerField(verbose_name='Просмотры')
     Dumbness = models.BooleanField(verbose_name='Тупость', default=False)
     
@@ -27,7 +27,7 @@ class Ff(models.Model):
     
 class Video(models.Model):
     length = models.IntegerField(verbose_name='Длина')
-    description = models.CharField(verbose_name='Описание')
+    description = models.CharField(verbose_name='Описание', max_length=255)
     Number_of_views = models.IntegerField(verbose_name='Просмотры')
     
     def __str__(self):
