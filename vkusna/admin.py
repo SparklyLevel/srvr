@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from vkusna.models import User, Image
+from vkusna.models import User, Image, Ff, Video
 
 @admin.register(User)
 class UserAdmin(admin.ModelAdmin): 
