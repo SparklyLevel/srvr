@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponse
-from vkusna.models import User
+from vkusna.models import User, Ff, Video
 
 # Create your views here.
 def hi(request):

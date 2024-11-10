@@ -26,7 +26,7 @@ class Ff(models.Model):
         return self.title
     
 class Video(models.Model):
-    length = models.Integer(verbose_name='Длина')
+    length = models.IntegerField(verbose_name='Длина')
     description = models.CharField(verbose_name='Описание')
     Number_of_views = models.IntegerField(verbose_name='Просмотры')
     
