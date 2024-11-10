@@ -12,8 +12,16 @@ def byebye(request):
 
 def UsersList(request):
     users = User.objects.all().values('id', 'name', 'age', 'birth_date', 'IsFemboy')
-    ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
-    video = Video.objects.all().values('id', 'length','description')
     users_list = list(users) 
     return JsonResponse(users_list, safe=False)
+
+def FfList (request):
+     ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
+    ff_list = list(ff)
+    return JsonResponse(ff_list,safe=False)
+
+def VideoList(request):
+    video = Video.objects.all().values('id', 'length','description')
+    video_list=list(video)
+    return JsonResponse(video_list,safe=False)
 

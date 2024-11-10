@@ -12,7 +12,7 @@ class UserAdmin(admin.ModelAdmin):
     
 @admin.register(Ff)
 class UserAdmin(admin.ModelAdmin): 
-    list_display = ['id', 'title', 'Number_of_views', 'dumbness']
+    list_display = ['id', 'title', 'Number_of_views', 'Dumbness']
     
 @admin.register(Video)
 class UserAdmin(admin.ModelAdmin): 
