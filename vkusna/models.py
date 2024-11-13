@@ -5,6 +5,8 @@ class User(models.Model):
     age = models.IntegerField(verbose_name='Возраст')
     birth_date= models.DateField(verbose_name='Дата Рождения', auto_created=True)
     IsFemboy = models.BooleanField(verbose_name='наличие пениса', default=True)
+    fav_fetishes = models.ManyToManyField('Ff', related_name='users', verbose_name='ФавФетиши')
+    video = models.ForeignKey('Video', related_name='users', verbose_name='Видосики')
     
     def __str__(self):
         return self.name
@@ -31,7 +33,7 @@ class Video(models.Model):
     Number_of_views = models.IntegerField(verbose_name='Просмотры')
     
     def __str__(self):
-        return self.title
+        return self.description
 
 
     
