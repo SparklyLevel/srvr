@@ -16,4 +16,4 @@ class FfAdmin(admin.ModelAdmin):
     
 @admin.register(Video)
 class VideoAdmin(admin.ModelAdmin): 
-    list_display = ['id', 'length', 'description']
+    list_display = ['id', 'length', 'description', 'path']

@@ -3,6 +3,7 @@ class Video(models.Model):
     length = models.IntegerField(verbose_name='Длина')
     description = models.CharField(verbose_name='Описание', max_length=255)
     Number_of_views = models.IntegerField(verbose_name='Просмотры')
+    path = models.FileField(verbose_name='Путь видео', null=True, blank=True)
     
     def __str__(self):
         return self.description

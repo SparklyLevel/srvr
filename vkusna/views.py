@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.http import HttpResponse
 from vkusna.models import User, Image, Ff, Video
+from django.conf import settings
 
 # Create your views here.
 def hi(request):
@@ -19,3 +20,8 @@ def UsersList(request):
     video_list=list(video)
     return JsonResponse(video_list, safe=False)
 
+def V(request):
+    context = {
+        'MEDIA_URL': settings.MEDIA_URL,
+    }
+    return render(request, 'Videos.html', context)
