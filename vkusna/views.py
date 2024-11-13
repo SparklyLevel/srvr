@@ -12,7 +12,7 @@ def byebye(request):
 
 def UsersList(request):
     users = User.objects.all().values('id', 'name', 'age', 'birth_date', 'IsFemboy')
-    ff = Ff.objects.all().values('id', 'title','Number_of_views','dumbness')
+    ff = Ff.objects.all().values('id', 'title','Number_of_views','Dumbness')
     video = Video.objects.all().values('id', 'length','description')
     users_list = list(users) 
     ff_list=list(ff)
