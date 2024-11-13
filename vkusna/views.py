@@ -18,7 +18,7 @@ def UsersList(request):
     users_list = list(users) 
     ff_list=list(ff)
     video_list=list(video)
-    return JsonResponse(video_list, safe=False)
+    return JsonResponse(users_list, safe=False)
 
 def V(request):
     context = {
