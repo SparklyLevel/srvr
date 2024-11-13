@@ -7,13 +7,13 @@ class UserAdmin(admin.ModelAdmin):
     list_display = ['id', 'name', 'age', 'birth_date', 'IsFemboy']
     
 @admin.register(Image)
-class UserAdmin(admin.ModelAdmin): 
+class ImageAdmin(admin.ModelAdmin): 
     list_display = ['id', 'title', 'user', 'path']
     
 @admin.register(Ff)
-class UserAdmin(admin.ModelAdmin): 
+class FfAdmin(admin.ModelAdmin): 
     list_display = ['id', 'title', 'Number_of_views', 'Dumbness']
     
 @admin.register(Video)
-class UserAdmin(admin.ModelAdmin): 
+class VideoAdmin(admin.ModelAdmin): 
     list_display = ['id', 'length', 'description']
