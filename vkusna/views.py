@@ -17,5 +17,5 @@ def UsersList(request):
     users_list = list(users) 
     ff_list=list(ff)
     video_list=list(video)
-    return JsonResponse(users_list,ff_list, video_list, safe=False)
+    return JsonResponse(video_list, safe=False)
 
