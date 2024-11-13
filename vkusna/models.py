@@ -1,5 +1,12 @@
 from django.db import models
-
+class Video(models.Model):
+    length = models.IntegerField(verbose_name='Длина')
+    description = models.CharField(verbose_name='Описание', max_length=255)
+    Number_of_views = models.IntegerField(verbose_name='Просмотры')
+    
+    def __str__(self):
+        return self.description
+    
 class User(models.Model): 
     name = models.CharField(verbose_name='Имя', max_length=50)
     age = models.IntegerField(verbose_name='Возраст')
@@ -27,13 +34,7 @@ class Ff(models.Model):
     def __str__(self):
         return self.title
     
-class Video(models.Model):
-    length = models.IntegerField(verbose_name='Длина')
-    description = models.CharField(verbose_name='Описание', max_length=255)
-    Number_of_views = models.IntegerField(verbose_name='Просмотры')
-    
-    def __str__(self):
-        return self.description
+
 
 
     
