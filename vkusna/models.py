@@ -13,8 +13,8 @@ class User(models.Model):
     birth_date= models.DateField(verbose_name='Дата Рождения', auto_created=True)
     IsFemboy = models.BooleanField(verbose_name='наличие пениса', default=True)
     fav_fetishes = models.ManyToManyField('Ff', related_name='users', verbose_name='ФавФетиши')
-    video = models.ForeignKey(Video, on_delete=models.CASCADE, related_name='users', verbose_name='Видосики')
-    
+    video = models.ForeignKey(Video, on_delete=models.CASCADE, related_name='users', verbose_name='Видосики', null=True, blank=True)
+
     def __str__(self):
         return self.name
     
